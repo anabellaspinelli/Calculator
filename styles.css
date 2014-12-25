@@ -1,0 +1,81 @@
+* {
+	box-sizing: border-box;
+	font-family: monospace;
+	font-size: 1.1em;
+}
+
+body {
+	background-color: #FFF5C9;
+}
+
+h1 {
+	font-size: 3em;
+	text-align: center;
+	color: #333;
+}
+
+#wrapper {
+	background-color: #F62459;
+	border-radius: 10px;
+	width: 540px;
+	padding: 30px;
+	margin: 0 auto;
+	border-top: 10px solid #f3e73f;
+	border-right: 10px solid #f1c40f;
+	border-bottom: 10px solid #f1c40f;
+	border-left: 10px solid #f3e73f;
+}
+
+#inner-wrapper {
+	margin: 0 auto;
+	width: 100%;
+}
+
+input[type="button"] {
+	margin: 5px;
+	background-color: #FFF5C9;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 3px 3px #f1c40f;
+	transition: all 200ms ease;
+}
+
+input[type="button"]:active  {
+	box-shadow: none;
+}
+
+input[type="button"]:focus {
+	outline: none;
+}
+
+input.number {
+	width: 100px;
+	height: 40px;
+}
+
+input.operator, input[value="0"], #equals {
+	height: 40px;
+	width: 30px;
+}
+
+#display {
+	width: 442px;
+	height: 40px;
+	background-color: #F1C4BD;
+	margin: 5px;
+	border-radius: 5px;
+	padding-top: 5px;
+	padding-left: 10px;
+	color: #663399;
+	font-weight: 900;
+	font-size: 1.5em;
+}
+
+img.kitty {
+	display: block;
+	margin: 0 auto;
+}
+
+#bug {
+	display: none;
+}
