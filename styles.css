@@ -42,7 +42,7 @@ input[type="button"] {
 
 input[type="button"]:active  {
 	box-shadow: none;
-	background-color: #ccc3a9;
+	background-color: #22A7F0;
 }
 
 input[type="button"]:focus {
