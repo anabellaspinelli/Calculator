@@ -67,17 +67,17 @@ function insertarOperador(e) {
 function getNumberFromDisplay() {
 	if (display.innerHTML != "+", display.innerHTML != "-", display.innerHTML != "*", display.innerHTML != "÷") {
 		if (num1 == null) {
-			num1 = parseInt(display.innerHTML, 10);
+			num1 = parseFloat(display.innerHTML);
 		} else if (num2 == null){
-			num2 = parseInt(display.innerHTML, 10);
+			num2 = parseFloat(display.innerHTML);
 		}
 	}
 };
 
 function performBackgroundOperation(e) {
 	console.log("Los numeros que tengo son: " + num1 + " y " + num2);
-	enviarResultado(e);
-	num1 = result;
+	enviarResultado(e)
+;	num1 = result;
 	num2 = null;
 }
 
