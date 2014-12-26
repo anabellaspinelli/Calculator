@@ -42,6 +42,8 @@ function enviarResultado(e) {
 	} else {
 		display.innerHTML = e.target.value;
 	}
+	num1 = null;
+	num2 = null;
 }
 
 function insertar(e) {
@@ -74,7 +76,8 @@ function getNumberFromDisplay() {
 
 function performBackgroundOperation(e) {
 	console.log("Los numeros que tengo son: " + num1 + " y " + num2);
-	num1 = enviarResultado(e);
+	enviarResultado(e);
+	num1 = result;
 	num2 = null;
 }
 
