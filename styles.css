@@ -54,9 +54,28 @@ input.number {
 	height: 40px;
 }
 
-input.operator, input[value="0"], #equals {
+input.operator {
 	height: 40px;
-	width: 30px;
+	width: 34px;
+}
+
+input[value="*"], input[value="+"] {
+	margin-left: -5px;
+}
+
+input[value="0"] {
+	height: 40px;
+	width: 340px;
+}
+
+#equals {
+	height: 40px;
+	width: 80px;
+}
+
+#c {
+	height: 40px;
+	width: 80px;
 }
 
 #display {
