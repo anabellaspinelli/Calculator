@@ -40,6 +40,11 @@ input[type="button"] {
 	transition: all 300ms ease;
 }
 
+input[type="button"]:hover {
+	background-color: #FFEB88;
+	cursor: pointer;
+}
+
 input[type="button"]:active  {
 	box-shadow: none;
 	background-color: #22A7F0;
@@ -81,7 +86,7 @@ input[value="0"] {
 #display {
 	width: 442px;
 	height: 40px;
-	background-color: #F1C4BD;
+	background-color: #FFCFE8;
 	margin: 5px;
 	border-radius: 5px;
 	padding-top: 5px;
