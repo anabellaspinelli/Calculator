@@ -76,20 +76,20 @@ function performBackgroundOperation(e) {
 }
 
 function checkBug() {
-    if (display.innerHTML == "NaN") {
-	var div = document.createElement("div");
-	div.setAttribute("id", "bug");
-	var img = document.createElement("img");
-	img.setAttribute("src", "img/happy-kitty.jpg");
-	img.setAttribute("alt", "Happy kitty");
-	img.setAttribute("height", "280");
-	img.setAttribute("width", "400");
-	img.setAttribute("class", "kitty");
-	var h1 = document.createElement("h1");
-	h1.innerHTML = "OK so you found the bug, <br> here's a kitty for your efforts."
-	div.appendChild(h1);
-	div.appendChild(img);
-	document.body.appendChild(div);
-	document.getElementById("bug").style.display = "block";
-}
+    if ((display.innerHTML == "NaN") && (document.getElementById("bug") == undefined)) {
+		var div = document.createElement("div");
+		div.setAttribute("id", "bug");
+		var img = document.createElement("img");
+		img.setAttribute("src", "img/happy-kitty.jpg");
+		img.setAttribute("alt", "Happy kitty");
+		img.setAttribute("height", "280");
+		img.setAttribute("width", "400");
+		img.setAttribute("class", "kitty");
+		var h1 = document.createElement("h1");
+		h1.innerHTML = "OK so you found the bug, <br> here's a kitty for your efforts."
+		div.appendChild(h1);
+		div.appendChild(img);
+		document.body.appendChild(div);
+		document.getElementById("bug").style.display = "block";
+	}
 }

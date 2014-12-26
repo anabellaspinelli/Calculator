@@ -37,11 +37,12 @@ input[type="button"] {
 	border: none;
 	border-radius: 5px;
 	box-shadow: 3px 3px #f1c40f;
-	transition: all 200ms ease;
+	transition: all 300ms ease;
 }
 
 input[type="button"]:active  {
 	box-shadow: none;
+	background-color: #ccc3a9;
 }
 
 input[type="button"]:focus {
