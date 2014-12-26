@@ -1,11 +1,11 @@
 var innerWrapper = document.getElementById("inner-wrapper");
 var equals = document.getElementById("equals");
 var display = document.getElementById("display");
-var num1, num2;
+var num1, num2, result;
 var operator = "";
-var result;
 
 innerWrapper.addEventListener("click", buttonClick, false);
+document.getElementById("c").addEventListener("click", resetCalculator, false);
 
 function buttonClick(e) {
     if (e.target !== innerWrapper) {
@@ -39,19 +39,22 @@ function enviarResultado(e) {
 	}
 	if (e.target.className != "operator") {
 		display.innerHTML = result;
-		return result;
 	} else {
 		display.innerHTML = e.target.value;
-		return result;
 	}
 }
 
 function insertar(e) {
-	if (display.innerHTML == "0" || display.innerHTML == operator || display.innerHTML == result) {
+	if (display.innerHTML == result) {
+		resetCalculator();
+	}
+
+	if (display.innerHTML == "0" || display.innerHTML == operator) {
 		display.innerHTML = e.target.value;
 	} else {
 		display.innerHTML += e.target.value;
 	};
+
 }
 
 function insertarOperador(e) {
@@ -60,7 +63,7 @@ function insertarOperador(e) {
 };
 
 function getNumberFromDisplay() {
-	if (display.innerHTML != "+", display.innerHTML != "-", display.innerHTML != "+", display.innerHTML != "+") {
+	if (display.innerHTML != "+", display.innerHTML != "-", display.innerHTML != "*", display.innerHTML != "÷") {
 		if (num1 == null) {
 			num1 = parseInt(display.innerHTML, 10);
 		} else if (num2 == null){
@@ -74,6 +77,16 @@ function performBackgroundOperation(e) {
 	num1 = enviarResultado(e);
 	num2 = null;
 }
+
+function resetCalculator() {
+	operator = "";
+	num1 = null;
+	num2 = null;
+	result = null;
+	display.innerHTML = "0";
+}
+
+/* Lo que pasa es que getNumberFromDisplay() corre vacía porque trata de guardar un operador como un nro entonces los números quedan en undefined, y por eso da NaN.*/
 
 function checkBug() {
     if ((display.innerHTML == "NaN") && (document.getElementById("bug") == undefined)) {
