@@ -11,7 +11,7 @@ body {
 h1 {
 	font-size: 3em;
 	text-align: center;
-	color: #333;
+	color: #22A7F0;
 }
 
 #wrapper {
@@ -65,7 +65,7 @@ input[value="*"], input[value="+"] {
 
 input[value="0"] {
 	height: 40px;
-	width: 340px;
+	width: 341px;
 }
 
 #equals {
