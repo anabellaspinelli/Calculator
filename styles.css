@@ -20,10 +20,10 @@ h1 {
 	width: 540px;
 	padding: 30px;
 	margin: 0 auto;
-	border-top: 10px solid #f3e73f;
+	border-top: 5px solid #f3e73f;
 	border-right: 10px solid #f1c40f;
-	border-bottom: 10px solid #f1c40f;
-	border-left: 10px solid #f3e73f;
+	border-bottom: 15px solid #f1c40f;
+	border-left: 5px solid #f3e73f;
 }
 
 #inner-wrapper {
